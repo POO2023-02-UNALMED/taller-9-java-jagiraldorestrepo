@@ -130,6 +130,28 @@ public class Calculator extends VBox implements EventHandler<Actionevent>{
          }
          return number1 + operator + number2;
      }
+	 
+	 public String operador(String op){
+         operator = op;
+         return number1 + operator + number2;
+     }
+	 
+	 public float operar(String o){
+         float n1 = Character.getNumericValue(o.charAt(0));
+         float n2 = Character.getNumericValue(o.charAt(2));
+         switch (o.charAt(1)) {
+             case '*':
+                 return n1*n2;
+             case '/':
+                 return n1/n2;
+             case '+':
+                 return n1 + n2;
+             case '-':
+                 return n1-n2;
+             default:
+                 return 0;
+         }
+     }
 	
 
 	@Override
