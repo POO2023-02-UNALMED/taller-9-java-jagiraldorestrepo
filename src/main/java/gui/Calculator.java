@@ -160,11 +160,66 @@ public class Calculator extends VBox implements EventHandler<Actionevent>{
 		Button b = (Button) event.getSource();
 		String value = b.getText();
 		
-		***
-		***
-		***
+		switch (value) {
+        case "0":
+            displayText.setText(agrupar(value));
+            break;
+        case "1":
+            displayText.setText(agrupar(value));
+            break;
+        case "2":
+            displayText.setText(agrupar(value));
+            break;
+        case "3":
+            displayText.setText(agrupar(value));
+            break;
+        case "4":
+            displayText.setText(agrupar(value));
+            break;
+        case "5":
+            displayText.setText(agrupar(value));
+            break;
+        case "6":
+            displayText.setText(agrupar(value));
+            break;
+        case "7":
+            displayText.setText(agrupar(value));
+            break;
+        case "8":
+            displayText.setText(agrupar(value));
+            break;
+        case "9":
+            displayText.setText(agrupar(value));
+            break;
+        case "/":
+            displayText.setText(operador(value));
+            break;
+        case "*":
+            displayText.setText(operador(value));
+            break;
+        case "+":
+            displayText.setText(operador(value));
+            break;
+        case "-":
+            displayText.setText(operador(value));
+            break;
+        case "=":
+            displayText.setText(Float.toString(operar(displayText.getText())));
+            number1 = "";
+            number2 = "";
+            operator = "";
+            break;
+        case "C":
+            number1 = "";
+            number2 = "";
+            operator = "";
+            displayText.setText("");
+            break;
+        default:
+            break;
 		
 	}
-	
-
+	}
 }
+
+
