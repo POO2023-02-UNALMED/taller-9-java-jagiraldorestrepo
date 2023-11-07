@@ -44,35 +44,35 @@ public class Calculator extends VBox implements EventHandler<Actionevent>{
 		b7.setPrefWidth(50);
 		b7.setOnAction(this);
 		
-		*** b8 = new Button("8");
-		gd.add(b8, ***, 0);
+		Button b8 = new Button("8");
+		gd.add(b8, 1, 0);
 		b8.setPrefWidth(50);
 		b8.setOnAction(this);
 		
-		Button b9 = new Button(***);
-		gd.add(b9, 2, ***);
+		Button b9 = new Button("9");
+		gd.add(b9, 2, 0);
 		b9.setPrefWidth(50);
 		b9.setOnAction(this);
 		
 		Button div = new Button("/");
-		gd.add(div, ***, ***);
+		gd.add(div, 3, 0);
 		div.setPrefWidth(50);
-		div.setOnAction(***);
+		div.setOnAction(this);
 		
-		*** b4 = new Button("4");
+		Button b4 = new Button("4");
 		gd.add(b4, 0, 1);
 		b4.setPrefWidth(50);
 		b4.setOnAction(this);
 		
-		Button b5 = new ***("5");
-		gd.***(b5, 1, 1);
+		Button b5 = new Button("5");
+		gd.add(b5, 1, 1);
 		b5.setPrefWidth(50);
 		b5.setOnAction(this);
 		
 		Button b6 = new Button("6");
-		gd.add(b6, ***, ***);
+		gd.add(b6, 2, 1);
 		b6.setPrefWidth(50);
-		***.setOnAction(this);
+		b6.setOnAction(this);
 		
 		*** mul = new Button("*");
 		gd.add(mul, ***, 1);
