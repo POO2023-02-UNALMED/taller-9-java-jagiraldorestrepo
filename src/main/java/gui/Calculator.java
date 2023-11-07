@@ -16,7 +16,7 @@ public class Calculator extends VBox implements EventHandler<Actionevent>{
 	
 	String number1 = "";
 	String number2 = "";
-	String operator;
+	String operator = "";
 	Text displayText;
 	
 	public Calculator(){
@@ -31,16 +31,16 @@ public class Calculator extends VBox implements EventHandler<Actionevent>{
 		
 		sp.setPadding(new Insets(10, 10, 10, 10));
 		
-		*** gd = new GridPane();
+		GridPane gd = new GridPane();
 		
 		gd.setPadding(new Insets(10, 10, 10, 10));
 		gd.setVgap(5);
 		gd.setHgap(4);
 		
-		gd.setAlignment(Pos.***);
+		gd.setAlignment(Pos.CENTER);
 		
-		Button b7 = new ***("7");
-		gd.add(b7, 0, ***);
+		Button b7 = new Button("7");
+		gd.add(b7, 0, 0);
 		b7.setPrefWidth(50);
 		b7.setOnAction(this);
 		
