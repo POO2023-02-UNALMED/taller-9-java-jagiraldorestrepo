@@ -121,9 +121,19 @@ public class Calculator extends VBox implements EventHandler<Actionevent>{
 		
 		this.getChildren().addAll(sp, gd);
 	}
+	
+	 public String agrupar(String num){
+         if (number1.isEmpty()){
+             number1 = num;
+         } else {
+             number2 = num;
+         }
+         return number1 + operator + number2;
+     }
+	
 
 	@Override
-	public void ***(ActionEvent event) {
+	public void handle(ActionEvent event) {
 		
 		Button b = (Button) event.getSource();
 		String value = b.getText();
