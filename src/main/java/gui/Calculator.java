@@ -12,7 +12,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 
-public class Calculator extends VBox implements EventHandler<***>{
+public class Calculator extends VBox implements EventHandler<Actionevent>{
 	
 	String number1 = "";
 	String number2 = "";
