@@ -12,7 +12,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 
-public class Calculator extends VBox implements EventHandler<Actionevent>{
+public class Calculator extends VBox implements EventHandler<ActionEvent>{
 	
 	String number1 = "";
 	String number2 = "";
@@ -92,7 +92,7 @@ public class Calculator extends VBox implements EventHandler<Actionevent>{
 		Button b3 = new Button("3");
 		gd.add(b3, 2, 2);
 		b3.setPrefWidth(50);
-		b3.setOnAction(***);
+		b3.setOnAction(this);
 		
 		Button minus = new Button("-");
 		gd.add(minus, 3, 2);
@@ -130,13 +130,13 @@ public class Calculator extends VBox implements EventHandler<Actionevent>{
          }
          return number1 + operator + number2;
      }
-	 
-	 public String operador(String op){
+     
+     public String operador(String op){
          operator = op;
          return number1 + operator + number2;
      }
-	 
-	 public float operar(String o){
+     
+     public float operar(String o){
          float n1 = Character.getNumericValue(o.charAt(0));
          float n2 = Character.getNumericValue(o.charAt(2));
          switch (o.charAt(1)) {
@@ -152,7 +152,6 @@ public class Calculator extends VBox implements EventHandler<Actionevent>{
                  return 0;
          }
      }
-	
 
 	@Override
 	public void handle(ActionEvent event) {
@@ -160,66 +159,66 @@ public class Calculator extends VBox implements EventHandler<Actionevent>{
 		Button b = (Button) event.getSource();
 		String value = b.getText();
 		
-		switch (value) {
-        case "0":
-            displayText.setText(agrupar(value));
-            break;
-        case "1":
-            displayText.setText(agrupar(value));
-            break;
-        case "2":
-            displayText.setText(agrupar(value));
-            break;
-        case "3":
-            displayText.setText(agrupar(value));
-            break;
-        case "4":
-            displayText.setText(agrupar(value));
-            break;
-        case "5":
-            displayText.setText(agrupar(value));
-            break;
-        case "6":
-            displayText.setText(agrupar(value));
-            break;
-        case "7":
-            displayText.setText(agrupar(value));
-            break;
-        case "8":
-            displayText.setText(agrupar(value));
-            break;
-        case "9":
-            displayText.setText(agrupar(value));
-            break;
-        case "/":
-            displayText.setText(operador(value));
-            break;
-        case "*":
-            displayText.setText(operador(value));
-            break;
-        case "+":
-            displayText.setText(operador(value));
-            break;
-        case "-":
-            displayText.setText(operador(value));
-            break;
-        case "=":
-            displayText.setText(Float.toString(operar(displayText.getText())));
-            number1 = "";
-            number2 = "";
-            operator = "";
-            break;
-        case "C":
-            number1 = "";
-            number2 = "";
-            operator = "";
-            displayText.setText("");
-            break;
-        default:
-            break;
+		 switch (value) {
+         case "0":
+             displayText.setText(agrupar(value));
+             break;
+         case "1":
+             displayText.setText(agrupar(value));
+             break;
+         case "2":
+             displayText.setText(agrupar(value));
+             break;
+         case "3":
+             displayText.setText(agrupar(value));
+             break;
+         case "4":
+             displayText.setText(agrupar(value));
+             break;
+         case "5":
+             displayText.setText(agrupar(value));
+             break;
+         case "6":
+             displayText.setText(agrupar(value));
+             break;
+         case "7":
+             displayText.setText(agrupar(value));
+             break;
+         case "8":
+             displayText.setText(agrupar(value));
+             break;
+         case "9":
+             displayText.setText(agrupar(value));
+             break;
+         case "/":
+             displayText.setText(operador(value));
+             break;
+         case "*":
+             displayText.setText(operador(value));
+             break;
+         case "+":
+             displayText.setText(operador(value));
+             break;
+         case "-":
+             displayText.setText(operador(value));
+             break;
+         case "=":
+             displayText.setText(Float.toString(operar(displayText.getText())));
+             number1 = "";
+             number2 = "";
+             operator = "";
+             break;
+         case "C":
+             number1 = "";
+             number2 = "";
+             operator = "";
+             displayText.setText("");
+             break;
+         default:
+             break;
+     }
 		
 	}
-	}
+	
+
 }
-
-
